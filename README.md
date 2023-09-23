@@ -31,4 +31,6 @@ A web application for exploring and learning about various animal species.
 | `/api/animals/{id}/`  | PUT         | Update an existing animal's information. |
 | `/api/animals/{id}/`  | DELETE      | Delete an animal record from the database. |
 
+## Mockup:
 
+(images/WildlifeSafari.png)
