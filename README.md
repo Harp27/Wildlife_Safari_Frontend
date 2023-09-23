@@ -4,7 +4,7 @@
 
 A web application for exploring and learning about various animal species.
 
-##Links:
+## Links:
 
 [Frontend Github](https://github.com/Harp27/Wildlife_Safari_Frontend)
 
