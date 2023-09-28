@@ -1,4 +1,5 @@
 import {Link, useLoaderData, Form} from 'react-router-dom';
+import Header from "../components/Header"
 
 function Show (props){
     const post = useLoaderData()
@@ -11,6 +12,7 @@ function Show (props){
     }
 
     return <div style={div}>
+        <Header />
         <img src={post.image} alt={post.species_name} style={{ maxWidth: '100%', height: 'auto' }} />
         <h2>{post.species_name}</h2>
         <p>Description: {post.description}</p>
