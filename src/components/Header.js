@@ -5,7 +5,7 @@ import '../App.css';
 function Header() {
   return (
     <header className="header">
-      <h1>wildlifesafari</h1>
+      <h1>WildlifeSafari</h1>
     </header>
   );
 }

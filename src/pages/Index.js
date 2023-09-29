@@ -22,7 +22,7 @@ function Index (props){
         </div>
         
         <div className="form-container">
-          <h2 className="title">Create an Animal</h2> 
+          <h2 className="title">Add an Animal</h2> 
           <Form method="post" action="/create">
             <fieldset>
                 <input type="text" name="species_name" placeholder="Name" className="input"/>
@@ -31,7 +31,7 @@ function Index (props){
                 <input type="text" name="conservation_status" placeholder="Conservation Status" className="input"/>
                 <input type="text" name="population" placeholder="Population" className="input"/>
                 <input type="text" name="image" placeholder="Image URL" className="input"/>
-                <button className="button">Create a new Animal</button>
+                <button className="form-container">Add a new Animal</button>
             </fieldset>
           </Form>
         </div>

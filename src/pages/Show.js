@@ -4,37 +4,29 @@ import Header from "../components/Header"
 function Show (props){
     const post = useLoaderData()
 
-    const div = {
-        textAlign: "center",
-        border: "3px solid green",
-        width: "80%",
-        margin: "30px auto"
-    }
-
-    return <div style={div}>
+    return <div >
         <Header />
-        <img src={post.image} alt={post.species_name} style={{ maxWidth: '100%', height: 'auto' }} />
-        <h2>{post.species_name}</h2>
-        <p>Description: {post.description}</p>
-        <p>Habitat: {post.habitat}</p>
-        <p>Conservation Status: {post.conservation_status}</p>
-        <p>Population: {post.population}</p>
-        <h2>Update Animal</h2>
-        <Form method="post" action={`/update/${post.id}`}>
-            <input type="text" name="species_name" placeholder="Name" defaultValue={post.species_name}/>
-            <input type="text" name="description" placeholder="Description" defaultValue={post.description}/>
-            <input type="text" name="habitat" placeholder="Habitat" defaultValue={post.habitat}/>
-            <input type="text" name="conservation_status" placeholder="Conservation Status" defaultValue={post.conservation_status}/>
-            <input type="text" name="population" placeholder="Population" defaultValue={post.population}/>
-            <input type="text" name="image" placeholder="Image URL" defaultValue={post.image}/>
-            <button>Update</button>
+        <img src={post.image} alt={post.species_name} className="show-image" />
+        <h2 className="show-text">{post.species_name}</h2>
+        <p className="show-text"> {post.description}</p>
+        <p className="show-text">Habitat: {post.habitat}</p>
+        <p className="show-text">Conservation Status: {post.conservation_status}</p>
+        <p className="show-text">Population: {post.population}</p>
+        <h2 className="show-text">Update Animal</h2>
+        <Form method="post" action={`/update/${post.id}`}className="form-container">
+            <input className="show-input" type="text" name="species_name" placeholder="Name" defaultValue={post.species_name}/>
+            <input className="show-input" type="text" name="description" placeholder="Description" defaultValue={post.description}/>
+            <input className="show-input" type="text" name="habitat" placeholder="Habitat" defaultValue={post.habitat}/>
+            <input className="show-input" type="text" name="conservation_status" placeholder="Conservation Status" defaultValue={post.conservation_status}/>
+            <input className="show-input" type="text" name="population" placeholder="Population" defaultValue={post.population}/>
+            <input className="show-input" type="text" name="image" placeholder="Image URL" defaultValue={post.image}/>     
+            <button className="form-container">Update Animal</button>
+        </Form>
+        <Form method="post" action={`/delete/${post.id}`} className="form-container">
+        <button className="form-container">Delete Animal</button>
         </Form>
 
-        <Form method="post" action={`/delete/${post.id}`}>
-        <button>Delete Animal</button>
-        </Form>
-
-        <Link to="/">Back to Index</Link>
+        <Link className="form-container" to="/">Back to Index</Link>
     </div>
 
 
