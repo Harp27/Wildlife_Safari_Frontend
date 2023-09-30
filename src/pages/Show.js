@@ -32,7 +32,7 @@ function Show (props){
         <button className="form-container">Delete Animal</button>
         </Form>
 
-        <Link className="form-container" to="/">Back to Index</Link>
+        <Link className="form-container" to="/">Home</Link>
     </div>
 
 
