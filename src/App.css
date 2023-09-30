@@ -47,11 +47,9 @@ body {
   text-align: center; 
 }
 
-.SearchBar {
-  text-align: center;
-  z-index: 1001; 
-  margin-top: 80px;
-  
+.search-bar {
+  margin-top: 120px; /* Your desired margin-top value */
+  /* Other styles here */
 }
 
 .animal-image {

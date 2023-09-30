@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
 
-const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
 
+const SearchBar = ({ onSearch, className, searchTerm, setSearchTerm }) => {
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -12,14 +10,17 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div>
+    <div className={className}>
       <input
         type="text"
         placeholder="Search by Endangered Status"
         value={searchTerm}
         onChange={handleInputChange}
+        className="show-input"
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch} className="search-bar">
+        Search
+      </button>
     </div>
   );
 };

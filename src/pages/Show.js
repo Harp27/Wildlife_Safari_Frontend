@@ -1,8 +1,14 @@
 import {Link, useLoaderData, Form} from 'react-router-dom';
 import Header from "../components/Header"
+import { useEffect } from 'react';
 
 function Show (props){
     const post = useLoaderData()
+
+    useEffect(() => {
+        console.log('Show component mounted');
+       
+      }, []);
 
     return <div >
         <Header />

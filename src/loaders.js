@@ -14,10 +14,10 @@ export const indexLoader = async () => {
 export const showLoader = async ({params}) => {
     // grab the id from params
     const id = params.id
-    // make api call to backend show route
+    // make an API call to the backend show route
     const response = await fetch(url + id)
-    // turn response into a javascript object
+    // turn the response into a JavaScript object
     const animal = await response.json()
-    // return the javascript object so the Show component can use it
+    // return the JavaScript object so the Show component can use it
     return animal
 }
